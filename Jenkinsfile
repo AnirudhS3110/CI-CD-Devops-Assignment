@@ -11,7 +11,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/AnirudhS3110/CI-CD-Devops-Assignment.git'
+                git branch: 'main' , url:'https://github.com/AnirudhS3110/CI-CD-Devops-Assignment.git'
             }
         }
 
