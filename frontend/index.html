@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devops CI/CD Assignment 2023BCS0019</title>
+</head>
+<body>
+    <div>
+        <p id="name"></p>
+        <p id="rollnumber"></p>
+    </div>
+
+    <script>
+       async function getInfo()
+       {
+        const resp = await fetch('http://localhost:3000');
+        const data = await resp.json();
+        const name = data.name;
+        const rollnumber = data.rollnumber;
+        const nameObj = document.getElementById("name");
+        const rollNumberObj = document.getElementById("rollnumber");
+        nameObj.innerHTML = `Name: ${name}`;
+        rollNumberObj.innerHTML = `Roll Number:  ${rollnumber}`
+       }
+       getInfo();
+    </script>
+    
+</body>
+</html>
