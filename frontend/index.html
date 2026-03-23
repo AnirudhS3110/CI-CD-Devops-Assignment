@@ -14,7 +14,7 @@
     <script>
        async function getInfo()
        {
-        const resp = await fetch('http://13.203.103.157:3000');
+        const resp = await fetch('http://13.203.103.157:3000/');
         const data = await resp.json();
         const name = data.name;
         const rollnumber = data.rollnumber;
